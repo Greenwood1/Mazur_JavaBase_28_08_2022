@@ -3,7 +3,8 @@ package com.hillel.greenwoo.homeworks.homework5;
 
 import java.util.Scanner;
 
-public class CounterStrike {
+public class
+CounterStrike {
     public static final int COUNT_PLAYERS_IN_TEAM = 5;
 
     public static void main(String[] args) {
