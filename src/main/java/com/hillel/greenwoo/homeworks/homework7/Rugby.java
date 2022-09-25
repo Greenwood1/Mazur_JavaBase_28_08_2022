@@ -9,26 +9,27 @@ public class Rugby {
         int[] team1 = new int[25];
         int[] team2 = new int[25];
 
-        for (int i = 0; i < team1.length; i++) {
-            team1[i] = 18 + (int) (Math.random() * 23);
-            team2[i] = 18 + (int) (Math.random() * 23);
-        }
-
-        System.out.println(Arrays.toString(team1));
+        Rugby.random(team1);
         System.out.println("");
-        System.out.println(Arrays.toString(team2));
-        System.out.println("");
+        Rugby.random(team2);
 
-        System.out.println("Average age of the team #1 " + Rugby.plus(team1) / team1.length);
-        System.out.println("Average age of the team #2 " + Rugby.plus(team2) / team2.length);
+        System.out.println("Average age of the team #1 " + Rugby.average(team1) / team1.length);
+        System.out.println("Average age of the team #2 " + Rugby.average(team2) / team2.length);
 
     }
 
-    public static int plus(int array[]) {
+    public static int average(int array[]) {
         int middleAge = 0;
         for (int value : array) {
             middleAge += value;
         }
         return middleAge;
+    }
+
+    public static void random (int array[]) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = 18 + (int) (Math.random() * 28);
+        }
+        System.out.println(Arrays.toString(array));
     }
 }
