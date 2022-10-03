@@ -26,7 +26,7 @@ public class Rugby {
         return middleAge;
     }
 
-    public static void random (int array[]) {
+    public static void random(int array[]) {
         for (int i = 0; i < array.length; i++) {
             array[i] = 18 + (int) (Math.random() * 28);
         }
