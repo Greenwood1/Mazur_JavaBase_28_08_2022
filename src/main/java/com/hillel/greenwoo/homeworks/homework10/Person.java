@@ -1,7 +1,5 @@
 package com.hillel.greenwoo.homeworks.homework10;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Person {
     public static void main(String[] args) {
 
@@ -21,7 +19,7 @@ public class Person {
                 + city
                 + " "
                 + number
-                +".";
+                + ".";
         return str;
     }
 }
