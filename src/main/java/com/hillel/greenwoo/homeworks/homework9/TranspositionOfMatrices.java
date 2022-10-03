@@ -1,5 +1,72 @@
 package com.hillel.greenwoo.homeworks.homework9;
 
-public class TranspositionOfMatrices {
+import java.util.Scanner;
 
+public class TranspositionOfMatrices {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int m;
+        int n;
+
+
+
+        System.out.println("Pleas enter M");
+        m = enterNumber(scanner);
+
+        System.out.println("Pleas enter N");
+        n = enterNumber(scanner);
+
+        int[][] arrayM = new int [n][m];
+        int [][] arrayN = new int [m][n];
+
+        for (int i = 0; i < arrayM.length; i++) {
+            for (int j = 0; j < arrayM[i].length; j++) {
+                arrayM[i][j] = (int) (Math.random() * 10);
+            }
+        }
+
+        System.out.println("Print ArrayM");
+        for (int i = 0; i < arrayM.length; i++) {
+            for (int j = 0; j < arrayM[i].length; j++) {
+                System.out.print(arrayM[i][j] + "\t");
+            }
+    }
+
+//    static int getRandomNumberForArray (int min, int max, int[][] arrayX) {
+//        int i;
+//        int k = 0;
+//        for (i = 0; i < arrayX.length; i++ ) {
+//            for (k = 0; k < arrayX[i].length; k++) {
+//                arrayX[i][k] = (int) (Math.random() * (max - min + 1 ) + min);
+//            }
+//        }
+//        return arrayX[i][k];
+//    }
+
+    static int enterNumber (Scanner x) {
+        int temp;
+        while (true) {
+            if (x.hasNextInt()) {
+                temp = x.nextInt();
+                if (temp < 0 ) {
+                    System.out.println("Wrong data. Please enter positive number!");
+                } else {
+                    return temp;
+                }
+                x.nextLine();
+            } else {
+                System.out.println("Wrong data. Try again!");
+                x.nextLine();
+            }
+        }
+    }
+
+//    static void printArray(int[][] array) {
+//        for (int i = 0; i < array.length; i ++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                System.out.println(array[i][j] + "\t");
+//            }
+//        }
+//    }
 }
