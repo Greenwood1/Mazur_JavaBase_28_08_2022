@@ -1,5 +1,7 @@
 package com.hillel.greenwoo.homeworks.homework11;
 
+import java.sql.SQLOutput;
+
 public class Burger {
 
     String roll;
@@ -15,7 +17,7 @@ public class Burger {
         this.cheese = cheese;
         this.green = green;
         this.mayonnaise = mayonnaise;
-        System.out.println(toString());
+        System.out.println(roll + " " + meat + " " + cheese + " " + green + " " + mayonnaise);
     }
 
     public Burger(String roll, String meat, String cheese, String green) {
@@ -24,6 +26,7 @@ public class Burger {
         this.meat = meat;
         this.cheese = cheese;
         this.green = green;
+        System.out.println(roll + " " + meat + " " + cheese + " " + green);
     }
 
     public Burger(String roll, String meat, String cheese, String green, String mayonnaise, boolean doubleMeat) {
@@ -33,16 +36,7 @@ public class Burger {
         this.green = green;
         this.mayonnaise = mayonnaise;
         this.doubleMeat = doubleMeat;
+        System.out.println(roll + " " + meat + " " + cheese + " " + green + " " + mayonnaise + " " + doubleMeat);
     }
 
-    @Override
-    public String toString() {
-        return "Burger{" +
-                "roll='" + roll + '\'' +
-                ", meat='" + meat + '\'' +
-                ", cheese='" + cheese + '\'' +
-                ", green='" + green + '\'' +
-                ", mayonnaise='" + mayonnaise + '\'' +
-                '}';
-    }
 }
