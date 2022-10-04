@@ -7,5 +7,6 @@ public class BurgerMain {
 
         Burger burger = new Burger("roll", "meat", "cheese", "green");
         System.out.println(burger);
+
     }
 }
