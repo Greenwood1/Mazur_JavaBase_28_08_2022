@@ -23,10 +23,10 @@ public class TranspositionOfMatrices {
                 arrayM[i][j] = (int) (Math.random() * 10);
             }
         }
-        System.out.println("Print ArrayM");
+        System.out.println("Array BEFORE");
         printArray(arrayM);
 
-        System.out.println("Print ArrayN");
+        System.out.println("Array AFTER ");
         for (int i = 0; i < arrayN.length; i++) {
             for (int j = 0; j < arrayN[i].length; j++) {
                 arrayN[i][j] = arrayM[j][i];
