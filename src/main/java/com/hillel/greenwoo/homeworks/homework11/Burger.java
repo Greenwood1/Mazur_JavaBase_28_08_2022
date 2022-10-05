@@ -17,16 +17,15 @@ public class Burger {
         this.cheese = cheese;
         this.green = green;
         this.mayonnaise = mayonnaise;
-        System.out.println(roll + " " + meat + " " + cheese + " " + green + " " + mayonnaise);
+        System.out.println(this);
     }
 
     public Burger(String roll, String meat, String cheese, String green) {
-        toString();
         this.roll = roll;
         this.meat = meat;
         this.cheese = cheese;
         this.green = green;
-        System.out.println(roll + " " + meat + " " + cheese + " " + green);
+        System.out.println(this);
     }
 
     public Burger(String roll, String meat, String cheese, String green, String mayonnaise, boolean doubleMeat) {
@@ -36,7 +35,18 @@ public class Burger {
         this.green = green;
         this.mayonnaise = mayonnaise;
         this.doubleMeat = doubleMeat;
-        System.out.println(roll + " " + meat + " " + cheese + " " + green + " " + mayonnaise + " " + doubleMeat);
+        System.out.println(this);
     }
 
+    @Override
+    public String toString() {
+        return "Burger{" +
+                "roll='" + roll + '\'' +
+                ", meat='" + meat + '\'' +
+                ", cheese='" + cheese + '\'' +
+                ", green='" + green + '\'' +
+                (mayonnaise != null ? ", mayonnaise='" + mayonnaise + '\'' : "") +
+                (doubleMeat ? ", doubleMeat=" + doubleMeat : "") +
+                '}';
+    }
 }
