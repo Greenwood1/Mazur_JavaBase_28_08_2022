@@ -27,13 +27,17 @@ public class TranspositionOfMatrices {
         printArray(arrayM);
 
         System.out.println("Array AFTER ");
+        transform(arrayM, arrayN);
+
+        printArray(arrayN);
+    }
+
+    private static void transform(int[][] arrayM, int[][] arrayN) {
         for (int i = 0; i < arrayN.length; i++) {
             for (int j = 0; j < arrayN[i].length; j++) {
                 arrayN[i][j] = arrayM[j][i];
             }
         }
-
-        printArray(arrayN);
     }
 
     static int enterNumber(Scanner x) {
