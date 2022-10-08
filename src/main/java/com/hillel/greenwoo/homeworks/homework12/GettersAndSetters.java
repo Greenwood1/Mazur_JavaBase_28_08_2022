@@ -9,6 +9,7 @@ public class GettersAndSetters {
     private int dayOfBirth;
     private String monthOfBirth;
     private int yearOfBirth;
+    private int age;
     private int weight;
     private int pressure;
     private int steps;
@@ -26,7 +27,8 @@ public class GettersAndSetters {
         this.weight = weight;
         this.pressure = pressure;
         this.steps = steps;
-        age(this.yearOfBirth);
+        age(yearOfBirth,age);
+
     }
 
 
@@ -86,9 +88,9 @@ public class GettersAndSetters {
         return yearOfBirth;
     }
 
-    private int age(int year) {
+    private int age(int year, int age ) {
         int currentYear = 2020;
-        int age = currentYear - year;
+         age = currentYear - year;
 
         return age;
     }
@@ -101,7 +103,7 @@ public class GettersAndSetters {
                 "Date of Birth: " + getDayOfBirth() +
                 " " + getMonthOfBirth() + " " +
                 getYearOfBirth() + '\n' +
-                "Age: " + age(this.yearOfBirth) + '\n' +
+                "Age: " + age(this.yearOfBirth, this.age) + '\n' +
                 "Email: " + getEmail() + '\n' +
                 "Phone number: " + getNumber() + '\n' +
                 "Weight: " + getWeight() + '\n' +
