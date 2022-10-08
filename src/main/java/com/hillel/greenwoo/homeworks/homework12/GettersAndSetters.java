@@ -2,6 +2,7 @@ package com.hillel.greenwoo.homeworks.homework12;
 
 public class GettersAndSetters {
 
+    private final int CURRENT_YEAR = 2020;
     private String name;
     private String surname;
     private String email;
@@ -15,8 +16,7 @@ public class GettersAndSetters {
     private int steps;
 
 
-    public GettersAndSetters(String name, String surname, String email, String number, int dayOfBirth,
-                             String monthOfBirth, int yearOfBirth, int weight, int pressure, int steps) {
+    public GettersAndSetters(String name, String surname, String email, String number, int dayOfBirth, String monthOfBirth, int yearOfBirth, int weight, int pressure, int steps) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -27,7 +27,7 @@ public class GettersAndSetters {
         this.weight = weight;
         this.pressure = pressure;
         this.steps = steps;
-        age(yearOfBirth,age);
+        age(yearOfBirth);
 
     }
 
@@ -88,27 +88,13 @@ public class GettersAndSetters {
         return yearOfBirth;
     }
 
-    private int age(int year, int age ) {
-        int currentYear = 2020;
-         age = currentYear - year;
-
-        return age;
+    private int age(int year) {
+        return CURRENT_YEAR - year;
     }
 
 
     public String printAccount() {
-        return "Account: " + '\n' +
-                "Name: " + getName() + '\n' +
-                "Surname: " + getSurname() + '\n' +
-                "Date of Birth: " + getDayOfBirth() +
-                " " + getMonthOfBirth() + " " +
-                getYearOfBirth() + '\n' +
-                "Age: " + age(this.yearOfBirth, this.age) + '\n' +
-                "Email: " + getEmail() + '\n' +
-                "Phone number: " + getNumber() + '\n' +
-                "Weight: " + getWeight() + '\n' +
-                "Pressure: " + getPressure() + '\n' +
-                "Steps: " + getSteps();
+        return "Account: " + '\n' + "Name: " + getName() + '\n' + "Surname: " + getSurname() + '\n' + "Date of Birth: " + getDayOfBirth() + " " + getMonthOfBirth() + " " + getYearOfBirth() + '\n' + "Age: " + age(this.yearOfBirth) + '\n' + "Email: " + getEmail() + '\n' + "Phone number: " + getNumber() + '\n' + "Weight: " + getWeight() + '\n' + "Pressure: " + getPressure() + '\n' + "Steps: " + getSteps();
 
     }
 
