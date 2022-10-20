@@ -11,8 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
         runMachine();
-        System.out.println("Кількість напоїв " + Drink.count);
-        System.out.println("Загальна вартість " + totalPrice);
+        System.out.println("Number of Drinks" + Drink.count);
+        System.out.println("TOTAL PRICE" + totalPrice);
 
     }
 
@@ -27,32 +27,38 @@ public class Main {
 
             switch (drinksMachine) {
                 case TEA -> {
-                    System.out.println("Your drink " + DrinksMachine.TEA.getTitle() + " is ready, its price " + Drinks.TEA_PRICE);
+                    System.out.println("Your drink " + DrinksMachine.TEA.getTitle() + " is ready, its price "
+                            + Drinks.TEA_PRICE);
                     totalPrice += Drink.count;
                     break;
                 }
                 case COFFEE -> {
-                    System.out.println("Your drink " + DrinksMachine.COFFEE.getTitle() + " is ready, its price " + Drinks.COFFEE_PRICE);
+                    System.out.println("Your drink " + DrinksMachine.COFFEE.getTitle() + " is ready, its price "
+                            + Drinks.COFFEE_PRICE);
                     totalPrice += Drink.count;
                     break;
                 }
                 case LEMONADE -> {
-                    System.out.println("Your drink " + DrinksMachine.LEMONADE.getTitle() + " is ready, its price " + Drinks.LEMONADE_PRICE);
+                    System.out.println("Your drink " + DrinksMachine.LEMONADE.getTitle() + " is ready, its price "
+                            + Drinks.LEMONADE_PRICE);
                     totalPrice += Drink.count;
                     break;
                 }
                 case MOJITO -> {
-                    System.out.println("Your drink " + DrinksMachine.MOJITO.getTitle() + " is ready, its price " + Drinks.MOJITO_PRICE);
+                    System.out.println("Your drink " + DrinksMachine.MOJITO.getTitle() + " is ready, its price "
+                            + Drinks.MOJITO_PRICE);
                     totalPrice += Drink.count;
                     break;
                 }
                 case WATER -> {
-                    System.out.println("Your drink " + DrinksMachine.WATER.getTitle() + " is ready, its price " + Drinks.WATER_PRICE);
+                    System.out.println("Your drink " + DrinksMachine.WATER.getTitle() + " is ready, its price "
+                            + Drinks.WATER_PRICE);
                     totalPrice += Drink.count;
                     break;
                 }
                 case COLA -> {
-                    System.out.println("Your drink " + DrinksMachine.COLA.getTitle() + " is ready, its price " + Drinks.COCA_COLA_PRICE);
+                    System.out.println("Your drink " + DrinksMachine.COLA.getTitle() + " is ready, its price "
+                            + Drinks.COCA_COLA_PRICE);
                     totalPrice += Drink.count;
                     break;
                 }
